@@ -1,5 +1,5 @@
-<h1>Heroes <small>Marvell y DC</small></h1>
-
+<h1>Searching <small>Heroes of Marvell y DC: "{{ textSearch }}"</small></h1>
+<hr>
 <div class="card-columns" *ngIf="heroesArr.length > 0; else noResults">
     <div class="card animated fadeIn fast" *ngFor="let heroe of heroesArr; let i = index">
         <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
@@ -15,5 +15,9 @@
 </div>
 
 <ng-template #noResults>
-    There are no results that match your search "{{ textSearch }}"
+    <div class="col-md-12">
+        <div class="alert alert-info animated fadeIn fast" role="alert">
+            There are no results that match your search.
+        </div>
+    </div>
 </ng-template>
