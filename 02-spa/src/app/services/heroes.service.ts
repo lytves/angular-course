@@ -67,6 +67,23 @@ private heroes: Heroe[] =
     getHeroe(idx: string) {
       return this.heroes[idx];
     }
+
+    searchHeros(searchText: string): Heroe[] {
+
+      let heroesArr: Heroe[]  =  [];
+      searchText = searchText.toLocaleLowerCase();
+
+      // for (let h of this.heroes) {
+      //   let name: string = h.nombre.tofLowerCase();
+      //   if (name.indexOf(searchText) >= 0) {
+      //     heroesArr.push(h);
+      //   }
+      // }
+
+      heroesArr = this.heroes.filter(h => h.nombre.toLowerCase().indexOf(searchText) >= 0);
+      console.dir(heroesArr);
+      return heroesArr;
+    }
 }
 
 export interface Heroe {

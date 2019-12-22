@@ -19,9 +19,9 @@
                 <a class="nav-link" [routerLink]="['heroes']">Heroes</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline my-2 my-lg-0" (submit)="$event.preventDefault()">
+            <input id="seacrhText" class="form-control mr-sm-2" type="search" placeholder="Search a hero" (keydown.enter)="searchHeroes(seacrhText.value)" #seacrhText>
+            <button (click)="searchHeroes(seacrhText.value)" class="btn btn-outline-primary my-2 my-sm-0" type="button">Search</button>
         </form>
     </div>
 </nav>
