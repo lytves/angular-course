@@ -24,7 +24,7 @@ export class SearchHeroComponent implements OnInit {
       this.textSearch = params['text'];
       this.heroesArr = this._heroesService.searchHeros(params['text']);
       // limpiamos el input de la búsqueda
-      document.querySelector('#seacrhText').value = '';
+      (document.querySelector('#seacrhText') as HTMLInputElement).value = '';
     });
   }
 
