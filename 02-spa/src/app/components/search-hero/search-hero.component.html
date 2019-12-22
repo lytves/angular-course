@@ -1,6 +1,6 @@
 <h1>Heroes <small>Marvell y DC</small></h1>
 
-<div class="card-columns">
+<div class="card-columns" *ngIf="heroesArr.length > 0; else noResults">
     <div class="card animated fadeIn fast" *ngFor="let heroe of heroesArr; let i = index">
         <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
         <div class="card-body">
@@ -13,3 +13,7 @@
         </div>
     </div>
 </div>
+
+<ng-template #noResults>
+    There are no results that match your search "{{ textSearch }}"
+</ng-template>

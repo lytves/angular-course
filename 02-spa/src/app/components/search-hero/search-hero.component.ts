@@ -8,8 +8,9 @@ import { Router } from '@angular/router';
   templateUrl: './search-hero.component.html'
 })
 export class SearchHeroComponent implements OnInit {
-  
-  private heroesArr: Heroe[];
+
+  heroesArr: Heroe[];
+  textSearch: string;
 
   constructor(
     private _activatedRoute: ActivatedRoute,
@@ -20,8 +21,9 @@ export class SearchHeroComponent implements OnInit {
   ngOnInit() {
     this._activatedRoute.params.subscribe(params => {
       // text - is defined in app.routes - { path: 'search/:text', component: SearchHeroComponent},
-      // tslint:disable-next-line: no-string-literal
+      this.textSearch = params['text'];
       this.heroesArr = this._heroesService.searchHeros(params['text']);
+      // limpiamos el input de la búsqueda
       document.querySelector('#seacrhText').value = '';
     });
   }
