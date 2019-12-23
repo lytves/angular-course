@@ -89,7 +89,8 @@
                         "karmaConfig": "karma.conf.js",
                         "assets": [
                             "src/favicon.ico",
-                            "src/assets"
+                            "src/assets",
+                            "_redirects"
                         ],
                         "styles": [
                             "src/styles.css"
@@ -120,6 +121,14 @@
                         "production": {
                             "devServerTarget": "spa:serve:production"
                         }
+                    }
+                },
+                "deploy": {
+                    "builder": "@netlify-builder/deploy:deploy",
+                    "options": {
+                        "outputPath": "dist/spa",
+                        "netlifyToken": "5c1cecc0f7966a3019f21fd56223bea50e8bbf146343de0cb50cc440b1393b7b",
+                        "siteId": "917678b7-7229-490d-aa7a-3f92cb6a67bd"
                     }
                 }
             }
