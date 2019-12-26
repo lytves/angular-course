@@ -1,15 +1,19 @@
 <h1>Heroes <small>Marvell y DC</small></h1>
 
 <div class="card-columns">
-    <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
-        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">
-        <div class="card-body">
-            <h5 class="heroe">{{ heroe.nombre }}</h5>
-            <p class="card-text">{{ heroe.bio }}</p>
-            <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
-
-            <button (click)="showHeroe(i)" class="btn btn-outline-primary btn-block">Show more...</button>
-            <!-- <a [routerLink]="[ '/heroe', i]">Show more...</a> -->
-        </div>
-    </div>
+  <app-hero-card (selectedHero) = "showHeroe( $event )"  [hero] = "heroe" [index] = "i" *ngFor="let heroe of heroes; let i = index"></app-hero-card>
 </div>
+
+<!--<div class="card-columns">-->
+<!--    <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">-->
+<!--        <img [src]="heroe.img" class="card-img-top" [alt]="heroe.nombre">-->
+<!--        <div class="card-body">-->
+<!--            <h5 class="heroe">{{ heroe.nombre }}</h5>-->
+<!--            <p class="card-text">{{ heroe.bio }}</p>-->
+<!--            <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>-->
+
+<!--            <button (click)="showHeroe(i)" class="btn btn-outline-primary btn-block">Show more...</button>-->
+<!--            &lt;!&ndash; <a [routerLink]="[ '/heroe', i]">Show more...</a> &ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

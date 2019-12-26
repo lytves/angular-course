@@ -73,15 +73,17 @@ private heroes: Heroe[] =
       let heroesArr: Heroe[]  =  [];
       searchText = searchText.toLocaleLowerCase();
 
-      // for (let h of this.heroes) {
-      //   let name: string = h.nombre.tofLowerCase();
-      //   if (name.indexOf(searchText) >= 0) {
-      //     heroesArr.push(h);
-      //   }
-      // }
+      for (let i = 0; i < this.heroes.length; i++) {
+        const h = this.heroes[i];
+        h.idx = i;
+        const name: string = h.nombre.toLowerCase();
+        if (name.indexOf(searchText) >= 0) {
+          heroesArr.push(h);
+        }
+      }
 
-      heroesArr = this.heroes.filter(h => h.nombre.toLowerCase().indexOf(searchText) >= 0);
-      console.dir(heroesArr);
+      // heroesArr = this.heroes.filter(h => h.nombre.toLowerCase().indexOf(searchText) >= 0);
+      // console.dir(heroesArr);
       return heroesArr;
     }
 }
@@ -92,4 +94,5 @@ export interface Heroe {
     img: string;
     aparicion: string;
     casa: string;
+    idx?: number;
 }
