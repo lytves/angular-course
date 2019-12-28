@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/_redirects"
             ],
             "scripts": []
           },
@@ -86,7 +87,8 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/_redirects"
             ],
             "styles": [
               "src/styles.css"
@@ -118,8 +120,17 @@
               "devServerTarget": "pipes:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/pipes",
+            "netlifyToken": "5c1cecc0f7966a3019f21fd56223bea50e8bbf146343de0cb50cc440b1393b7b",
+            "siteId": "333fe3db-3fc2-43bf-9521-9511c0f19bb9"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "pipes"
 }
