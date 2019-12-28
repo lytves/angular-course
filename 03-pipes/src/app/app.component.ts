@@ -36,6 +36,8 @@ export class AppComponent {
   today = new Date();
 
   video = 'IMTIApt1T_Y';
-  //
+
+  pass = 'SecretPass';
+  showPass = false;
 
 }

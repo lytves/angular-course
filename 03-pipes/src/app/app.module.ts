@@ -9,12 +9,14 @@ import {AppComponent} from './app.component';
 import {registerLocaleData} from '@angular/common';
 import {CapitalizedPipe} from './pipes/capitalized.pipe';
 import { SecuredomPipe } from './pipes/securedom.pipe';
+import { PasswordPipe } from './pipes/password.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CapitalizedPipe,
-    SecuredomPipe
+    SecuredomPipe,
+    PasswordPipe
   ],
   imports: [
     BrowserModule,

@@ -133,6 +133,17 @@
       <td>{{ name2 | capitalized: false}}</td>
     </tr>
 
+    <tr>
+      <td>{{ pass }}</td>
+      <td>
+        password: {{ showPass }}
+        <div class="container">
+          <button type="button" class="btn btn-block btn-outline-primary" (click)="showPass = !showPass">Show/Hide</button>
+        </div>
+      </td>
+      <td>{{ pass | password: showPass }}</td>
+    </tr>
+
     </tbody>
   </table>
 
@@ -170,7 +181,8 @@
     <h4>Youtube <small>video</small></h4>
     <div class="d-inline-block col-12">
 
-      <iframe width="560" height="315" [src]="video | securedom:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="560" height="315" [src]="video | securedom:'https://www.youtube.com/embed/'" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
     </div>
   </div>
