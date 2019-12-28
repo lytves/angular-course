@@ -11,3 +11,7 @@ Lo que aprenderás:
 * Crear aplicaciones en Angular siguiendo las mejores prácticas
 * Crear aplicaciones básicas en Ionic y utilizarlas en su celular (no es necesario cuentas de desarrollador)
 * Dominar las directivas, pipes, componentes, servicios y la estructura de una aplicación de Angular
+
+Aplicaciones creadas a lo largo del curso:
+1. Hola Mundo [https://loving-kirch-a0e387.netlify.com/](https://loving-kirch-a0e387.netlify.com/)
+2. Comics app - Heroes [https://nervous-bohr-739da3.netlify.com/home](https://nervous-bohr-739da3.netlify.com/home)

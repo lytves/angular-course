@@ -1,4 +1,4 @@
-# Spa - Comic app Heroes
+# Spa - Comics app - Heroes
 
 [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/lytves/vue-basic-authentication-example/blob/master/LICENSE)
 [![AngularVersion](https://img.shields.io/badge/Angular-8.3.21-red)](https://img.shields.io/badge/Angular-8.3.21-red)
