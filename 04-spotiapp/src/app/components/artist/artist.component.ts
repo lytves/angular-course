@@ -9,6 +9,8 @@ import {SpotifyService} from '../../services/spotify.service';
 })
 export class ArtistComponent implements OnInit {
 
+  errorService: boolean;
+  errorServiceMsg: string;
   artist: any = {};
   topTracks: any[] = [];
   loading: boolean;
@@ -29,7 +31,11 @@ export class ArtistComponent implements OnInit {
     this.spotifyService.getArtist(id).subscribe(artist => {
       this.artist = artist;
       this.loading = false;
-    });
+    }, (error) => {
+      this.errorService = true;
+      this.loading = false;
+      this.errorServiceMsg = error.error.error.message;
+    } );
   }
 
   getArtistTopTracks(id: string) {

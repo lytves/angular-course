@@ -1,3 +1,8 @@
 <app-loading *ngIf="loading"></app-loading>
 
+<div *ngIf="errorService" class="alert alert-danger m-5">
+  <h3>An error occurred, please try again later!</h3>
+  <p>{{ errorServiceMsg }}</p>
+</div>
+
 <app-artists-cards [items]="newReleases"></app-artists-cards>
