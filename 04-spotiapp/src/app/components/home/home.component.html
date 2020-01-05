@@ -1,15 +1,1 @@
-<div class="card-columns">
-
-  <div *ngFor="let release of newReleases" class="card">
-    <img [src]="release.images | imgCheck" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">{{ release.name }}</h5>
-      <p class="card-text">
-        <span *ngFor="let artist of release.artists" class="badge badge-success">
-          {{ artist.name }}
-        </span>
-      </p>
-    </div>
-  </div>
-
-</div>
+<app-artists-cards [items]="newReleases"></app-artists-cards>
