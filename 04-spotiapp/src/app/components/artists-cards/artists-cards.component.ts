@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-artists-cards',
   templateUrl: './artists-cards.component.html',
-  styleUrls: ['./artists-cards.component.css']
+  styleUrls: []
 })
 export class ArtistsCardsComponent implements OnInit {
 
