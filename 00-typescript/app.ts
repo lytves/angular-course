@@ -1,6 +1,10 @@
 // Uso de Let y Const
 let nombre: string = "Ricardo Tapia";
 let edad: number = 23;
+let bool: boolean = false; // true
+let fecha: Date = new Date();
+let allTypes: any = "Cualquier cosa";
+let stringOrNumber: string | number = "Una Cadena de Texto"; // 12
 
 const PERSONAJE = {
   nombre: nombre,
