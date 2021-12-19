@@ -124,8 +124,17 @@
               "devServerTarget": "spotiapp:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/spotiapp",
+            "netlifyToken": "5c1cecc0f7966a3019f21fd56223bea50e8bbf146343de0cb50cc440b1393b7b",
+            "siteId": "a2c6f172-1b80-4660-b99e-f00ed9a43fad"
+          }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "spotiapp"
 }

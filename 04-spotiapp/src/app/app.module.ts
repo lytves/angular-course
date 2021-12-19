@@ -1,6 +1,6 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-import {AppRoutingModule} from './app-routing.module';
+import {AppRoutes} from './app.routes';
 import {HttpClientModule} from '@angular/common/http';
 
 // pipes
@@ -15,6 +15,7 @@ import {ArtistComponent} from './components/artist/artist.component';
 import {NavbarComponent} from './components/shared/navbar/navbar.component';
 import {ArtistsCardsComponent} from './components/artists-cards/artists-cards.component';
 import {LoadingComponent} from './components/shared/loading/loading.component';
+import {SpotifyService} from './services/spotify.service';
 
 @NgModule({
   declarations: [
@@ -30,10 +31,12 @@ import {LoadingComponent} from './components/shared/loading/loading.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutes,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
