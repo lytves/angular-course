@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {SpotifyService} from '../../services/spotify.service';
+import {finalize} from 'rxjs/operators';
 
 @Component({
   selector: 'app-home',
@@ -18,12 +19,15 @@ export class HomeComponent implements OnInit {
     this.errorService = false;
 
     this.spotifyService.getNewReleases()
+      .pipe(
+        finalize(() => {
+          this.loading = false;
+        })
+      )
       .subscribe((data: any) => {
         this.newReleases = data;
-        this.loading = false;
       }, (error) => {
         this.errorService = true;
-        this.loading = false;
         this.errorServiceMsg = error.error.error.message;
       });
   }

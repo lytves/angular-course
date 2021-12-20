@@ -14,7 +14,7 @@
   <div class="col">
     <h3>{{ artist.name }}</h3>
     <p>
-      <a [href]="artist.external_urls.spotify" target="_blank">Spotify page: {{ artist.name }}</a>
+      <a [href]="artist.external_urls.spotify" target="_blank">Spotify artist's page: {{ artist.name }}</a>
     </p>
   </div>
 
@@ -40,7 +40,7 @@
       <tbody>
       <tr *ngFor="let track of topTracks">
         <td>
-          <img [src]="track.album.images | imgCheck" alt="" class="img-thumb">
+          <img [src]="track.album.images | imgCheck" alt={{track.name}} class="img-thumb">
         </td>
         <td>{{ track.album.name }}</td>
         <td>{{ track.name }}</td>
