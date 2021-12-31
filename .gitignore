@@ -48,4 +48,4 @@ Thumbs.db
 # Local Netlify folder
 .netlify
 
-.angular/cache/*
+*/.angular/cache/*
