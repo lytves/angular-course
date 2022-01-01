@@ -15,4 +15,11 @@ export class DeseosService {
     this.listas.push(list1, list2);
     console.log(this.listas);
   }
+
+  createList(title: string) {
+    const newList = new Lista(title);
+
+    this.listas.push(newList);
+
+  }
 }
