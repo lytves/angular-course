@@ -6,7 +6,7 @@ import {Lista} from '../models/lista.model';
 })
 export class DeseosService {
 
-  listas: Lista[] = [];
+  lists: Lista[] = [];
 
   constructor() {
     this.loadStorage();
@@ -14,19 +14,25 @@ export class DeseosService {
 
   createList(title: string) {
     const newList = new Lista(title);
-    this.listas.push(newList);
+    this.lists.push(newList);
     this.saveStorage();
+    return newList.id;
+  }
+
+  getList(id: string | number) {
+    id = Number(id);
+    return this.lists.find(listData => listData.id === id);
   }
 
   saveStorage() {
-    localStorage.setItem('data', JSON.stringify(this.listas));
+    localStorage.setItem('data', JSON.stringify(this.lists));
   }
 
   loadStorage() {
     if (localStorage.getItem("data") !== null) {
-      this.listas = JSON.parse(localStorage.getItem("data"));
+      this.lists = JSON.parse(localStorage.getItem("data"));
     } else {
-      this.listas = [];
+      this.lists = [];
     }
   }
 }
