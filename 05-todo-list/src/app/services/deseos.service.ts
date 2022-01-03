@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Lista} from '../models/lista.model';
 
 @Injectable({
@@ -9,17 +9,24 @@ export class DeseosService {
   listas: Lista[] = [];
 
   constructor() {
-    const list1 = new Lista("Celebrate New Year with my family");
-    const list2 = new Lista("Participate in the Marathon");
-
-    this.listas.push(list1, list2);
-    console.log(this.listas);
+    this.loadStorage();
   }
 
   createList(title: string) {
     const newList = new Lista(title);
-
     this.listas.push(newList);
+    this.saveStorage();
+  }
 
+  saveStorage() {
+    localStorage.setItem('data', JSON.stringify(this.listas));
+  }
+
+  loadStorage() {
+    if (localStorage.getItem("data") !== null) {
+      this.listas = JSON.parse(localStorage.getItem("data"));
+    } else {
+      this.listas = [];
+    }
   }
 }
