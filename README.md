@@ -2,7 +2,7 @@
 
 Udemy - [Angular: De cero a experto creando aplicaciones (Angular 8+)](https://www.udemy.com/share/101WdsBEMYc1xVQ3Q=/)
 
-Todo lo que necesitas saber de angular utilizando TypeScript y buenas prácticas ofrecidas por el equipo de angular.
+Todo lo que necesitas saber de angular utilizando TypeScript y buenas prácticas ofrecidas por el equipo de Angular.
 
 Lo que aprenderás:
 * Tener una base sólida para trabajar con Angular
