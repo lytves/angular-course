@@ -12,7 +12,7 @@ import {ListaItem} from '../../models/lista-item.model';
 export class AgregarPage implements OnInit {
 
   lista: Lista;
-  itemName: string = "";
+  itemName: string = '';
 
   constructor(private deseosService: DeseosService,
               private route: ActivatedRoute) {
@@ -22,12 +22,24 @@ export class AgregarPage implements OnInit {
 
   agregarItem() {
     if (!this.itemName.length) {
-      return
+      return;
     }
     const newItem = new ListaItem(this.itemName);
     this.lista.items.push(newItem);
     this.deseosService.saveStorage();
-    this.itemName = "";
+    this.itemName = '';
+  }
+
+  checkChanged(item: ListaItem) {
+    const pendingCount = this.lista.items.filter(itemData => !itemData.completed).length;
+    if (!pendingCount) {
+      this.lista.completed = true;
+      this.lista.finishedOn = new Date();
+    } else {
+      this.lista.completed = false;
+      this.lista.finishedOn = null;
+    }
+    this.deseosService.saveStorage();
   }
 
   ngOnInit() {

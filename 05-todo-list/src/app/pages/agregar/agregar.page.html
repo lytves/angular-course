@@ -27,9 +27,11 @@
     </ion-list-header>
 
     <ion-item color="dark"
-              *ngFor="let item of lista.items">
+              *ngFor="let item of lista.items"
+              class="animated fadeInDown">
       <ion-checkbox slot="start" color="tertiary"
-                    [(ngModel)]="item.completed"></ion-checkbox>
+                    [(ngModel)]="item.completed"
+                    (ionChange)="checkChanged(item)"></ion-checkbox>
       <ion-label>{{ item.description }}</ion-label>
     </ion-item>
 
