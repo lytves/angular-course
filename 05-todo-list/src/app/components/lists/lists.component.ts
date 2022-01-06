@@ -24,6 +24,10 @@ export class ListsComponent implements OnInit {
     }
   }
 
+  removeList(id: number) {
+    this.deseosService.removeList(id);
+  }
+
   ngOnInit() {
   }
 

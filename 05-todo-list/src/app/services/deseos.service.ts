@@ -19,6 +19,11 @@ export class DeseosService {
     return newList.id;
   }
 
+  removeList(id: number) {
+    this.lists = this.lists.filter(listData => listData.id !== id);
+    this.saveStorage();
+  }
+
   getList(id: string | number) {
     id = Number(id);
     return this.lists.find(listData => listData.id === id);
@@ -29,8 +34,8 @@ export class DeseosService {
   }
 
   loadStorage() {
-    if (localStorage.getItem("data") !== null) {
-      this.lists = JSON.parse(localStorage.getItem("data"));
+    if (localStorage.getItem('data') !== null) {
+      this.lists = JSON.parse(localStorage.getItem('data'));
     } else {
       this.lists = [];
     }
