@@ -1,6 +1,6 @@
 <ion-list color="dark">
   <ion-item-sliding
-    *ngFor="let lista of deseosService.lists">
+    *ngFor="let lista of deseosService.lists | filterCompleted:completed">
 
     <ion-item
       detail color="dark"
