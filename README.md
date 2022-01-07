@@ -17,5 +17,5 @@ Aplicaciones creadas a lo largo del curso:
 1. Hola Mundo [https://loving-kirch-a0e387.netlify.com/](https://loving-kirch-a0e387.netlify.com/)
 2. Comics app - Heroes [https://nervous-bohr-739da3.netlify.com/home](https://nervous-bohr-739da3.netlify.com/home)
 3. Pipes examples [https://nifty-lewin-7fdbb2.netlify.com/](https://nifty-lewin-7fdbb2.netlify.com/)
-4. SpotiApp [https://eloquent-goldwasser-c55971.netlify.app/](https://eloquent-goldwasser-c55971.netlify.app/)
+4. SpotiApp [https://eloquent-fermat-a856f4.netlify.app/](https://eloquent-fermat-a856f4.netlify.app/)
 5. Todo-List [https://distracted-tereshkova-b1490e.netlify.app/](https://distracted-tereshkova-b1490e.netlify.app/)

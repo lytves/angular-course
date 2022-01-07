@@ -1,5 +1,9 @@
 # SpotiApp
 
-Demo Page [https://eloquent-goldwasser-c55971.netlify.app/](https://eloquent-goldwasser-c55971.netlify.app/)
+Demo Page [https://eloquent-fermat-a856f4.netlify.app/](https://eloquent-fermat-a856f4.netlify.app/)
 
 ## Screenshots:
+
+![](img/1.png)
+![](img/2.png)
+![](img/3.png)
