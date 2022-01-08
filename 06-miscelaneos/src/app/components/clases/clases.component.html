@@ -16,3 +16,17 @@
   [ngClass]="{'btn-danger': props.danger, 'btn-info': !props.danger}">
   Change props
 </button>
+
+<h3 class="mt-2">Asynchronous process</h3>
+
+<button
+  class="btn btn-primary"
+  (click)="executeLoading()"
+  [disabled]="loading">
+  <i
+    [ngClass]="{'fa-refresh fa-spin': loading, 'fa-save': !loading}"
+    class="fa mx-1"
+  ></i>
+  <span *ngIf="!loading">Save</span>
+  <span *ngIf="loading">Saving</span>
+</button>
