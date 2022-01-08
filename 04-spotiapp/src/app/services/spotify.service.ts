@@ -18,8 +18,8 @@ export class SpotifyService {
   }
 
   getSpotifyToken() {
-    const clientId = '5fa03b3f6205406f9b11936689035249';
-    const clientSecret = '9d0d17fb3e7040c08394e0ef7a243559';
+    const clientId = 'YOUR_CLIENT_ID';
+    const clientSecret = 'YOUR_CLIENT_SECRET';
     return this.http.post('https://accounts.spotify.com/api/token', {
       grant_type: 'client_credentials',
       client_id: clientId,
