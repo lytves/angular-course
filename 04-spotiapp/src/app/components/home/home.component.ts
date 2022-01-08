@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
         this.newReleases = data;
       }, (error) => {
         this.errorService = true;
-        this.errorServiceMsg = error.error.error.message;
+        console.error('error', error);
+        this.errorServiceMsg = (error && error.error && error.error.message ? error.error.message : '');
       });
   }
 
