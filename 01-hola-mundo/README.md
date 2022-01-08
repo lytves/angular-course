@@ -5,3 +5,5 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ff6b562b-6a16-4555-b3ae-4918c7f5f38d/deploy-status)](https://app.netlify.com/sites/loving-kirch-a0e387/deploys)
 
 The project was published on Netlify, you can watch its live demo here https://loving-kirch-a0e387.netlify.com/
+
+![](img/1.png)
