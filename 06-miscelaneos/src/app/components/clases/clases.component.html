@@ -1,0 +1,18 @@
+<div [ngClass]="alert" class="alert mt-2" role="alert">
+  A simple primary alert—check it out!
+</div>
+
+<button class="btn btn-success mx-2" (click)="alert = 'alert-success'">Success</button>
+<button class="btn btn-info mx-2" (click)="alert = 'alert-info'">Info</button>
+<button class="btn btn-danger mx-2" (click)="alert = 'alert-danger'">Danger</button>
+
+<h3 class="mt-2" [ngClass]="{'text-danger': props.danger, 'text-info': !props.danger}">
+  Hola, mundo!
+</h3>
+
+<button
+  (click)="props.danger = !props.danger"
+  class="btn"
+  [ngClass]="{'btn-danger': props.danger, 'btn-info': !props.danger}">
+  Change props
+</button>
