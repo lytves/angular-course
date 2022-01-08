@@ -6,4 +6,6 @@
 
 The project was published on Netlify, you can watch its live demo here https://loving-kirch-a0e387.netlify.com/
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+
 ![](img/1.png)
